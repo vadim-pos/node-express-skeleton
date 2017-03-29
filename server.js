@@ -26,8 +26,10 @@ hbs.registerHelper('getCurrentYear', () => new Date().getFullYear());
 
 app.get('/', (req, res) => {
     res.render('home.hbs', {
-        pageTitle: 'Home'
+        headerTitle: 'Header'
     });
 });
 
 app.listen(port, () => console.log(`Running on port ${port}`));
+
+module.exports = { app };
